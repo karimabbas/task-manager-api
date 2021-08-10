@@ -1,7 +1,7 @@
 const express = require('express')
-require('./src/db/mongoose')
-const useRouter = require('./src/routers/user')
-const taskRouter = require('./src/routers/task')
+require('./db/mongoose')
+const useRouter = require('./routers/user')
+const taskRouter = require('./routers/task')
 const app = express()
 const port = process.env.PORT
 
@@ -27,8 +27,8 @@ app.listen(port, ()=>{
     console.log("Server is up on port"+port)
 })
 
-const Task = require('./src/models/task')
-const User = require('./src/models/user')
+const Task = require('./models/task')
+const User = require('./models/user')
 
 /*const main = async ()=>{
     /*const task = await Task.findById('60be46fe0c663457e49e84de')
